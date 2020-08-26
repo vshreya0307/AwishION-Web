@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+body{
+    color: #fff;
+    background: #22242A;
+    font-family: "Times New Roman", Times, serif;
+}
+.signup-form form{
+    color: #22242A;
+    border-radius: 30px;
+    margin-bottom: 55px;
+    background: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.signup-form{
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 0px 0px 0px;
+}
+.signup-form h2{
+    color: #22242A;   
+}
+.button{
+    background-color: #22242A;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    
+}
+.title{
+    font-size: 50px;
+    font-weight: 100;
+    text-align: center;
+    padding: 100px 0px 0px 0px;
+}
+img{
+    padding: 0px 0px 0px 50px;
+}

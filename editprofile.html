@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<head>
+<title> Edit profile</title>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> --> 
+
+<link rel="stylesheet" type="text/css" href="editprofile.css">
+
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left_area">
+        <h3>tech <span>buddy</span></h3>
+      </div>
+      <div class="right_area">
+        <a href="index.html" class="logout_btn">Logout</a>
+      </div>
+    </header>
+    <!--header area end-->
+    <!--sidebar start-->
+    <div class="sidebar">
+      <center>
+        <div id="ep">
+            <img src="1.png" class="profile_image" alt="">
+            </div>
+            <div id="side" class="side">
+                <h4></h4>
+            </div>
+      </center>
+      <a href="profile.html"><i class="fas fa-desktop"></i><span>Profile</span></a>
+      <a href="feed.html"><i class="fas fa-cogs"></i><span>Feeds</span></a>
+      <a href="addpro.html"><i class="fas fa-table"></i><span>Add Project</span></a>
+      <a href="setting.html"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+    </div>
+    <!--sidebar end-->
+  <div class="content">
+    <!--search bar -->
+      <form class="search">
+      <input type="sea" name="search" placeholder="Search..">
+    </form>
+    <div class="container emp-profile">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <div id="profile" class="profile">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            </div>
+                        <div class="file btn btn-lg btn-primary">
+                            Change Photo
+                            <input type="file" name="fileButton" id="fileButton" multiple="" accept="images/*"/>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                                <h5>
+                                    Pravalika Padmanabhuni
+                                </h5>
+                                <h6>
+                                    Web Developer and Designer
+                                </h6>
+                                
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                  <button id="submit" type="button"  class="profile-edit-btn" name="btnAddMore" value="Edit Profile">Edit Profile</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div  id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="row">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Name</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" id="fname" name="fname" value="Pravalika Padmanabhuni">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Password</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="password" id="password" name="fname" value="Pravalika">
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Confirm Password</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="password" id="cpassword" name="fname" value="Pravalika">
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Email</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" id="email" name="fname" value="pravalikapadmanabhuni@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Skills</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" id="number" name="fname" value="html5">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Profession</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" id="prof" name="fname" value="Web Developer and Designer">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Hobbies</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" id="hobby" name="fname" value="reading books">
+                                        </div>
+                                    </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>           
+    </div>
+
+    
+</div>
+     
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+    <script src="editprofile.js"></script>
+
+
+</body>
+</html>

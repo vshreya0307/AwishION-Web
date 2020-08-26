@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>feed</title>
+    <link rel="stylesheet" href="feed.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  </head>
+  <body>
+
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left_area">
+        <h3>tech <span>buddy</span></h3>
+      </div>
+      <div class="right_area">
+        <a href="index.html" class="logout_btn">Logout</a>
+      </div>
+    </header>
+    <!--header area end-->
+    <!--sidebar start-->
+    <div class="sidebar">
+      <center>
+        <img src="1.png" class="profile_image" alt="Profile image">
+        <h4>Shreya</h4>
+      </center>
+      <a href="profile.html"><i class="fas fa-desktop"></i><span>Profile</span></a>
+      <a href="feed.html"><i class="fas fa-cogs"></i><span>Feeds</span></a>
+      <a href="addpro.html"><i class="fas fa-table"></i><span>Add Project</span></a>
+      <a href="setting.html"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+    </div>
+    <!--sidebar end-->
+  <div class="content">
+    <!--search bar -->
+    </head>
+      <body>
+      <form class="search">
+      <input type="text" name="search" placeholder="Search..">
+    </form>
+    <!--search bar end-->
+    <div  id="feed">
+    <!--dl class="feed">
+      <dt id="pname"></dt>
+      <dt id="skills"></dt>
+      <dt id="links"></dt>
+      <dt id="des"></dt>
+     <dt> <img id="myImgId" src="" class="proimage"></dt>
+     <dt><button onclick="likePost()" id="likeBtn" data-postid=""><i id="like" class="fa fa-thumbs-up" aria-hidden="true"></i></button><input type="number" id="myNumber">&nbsp;&nbsp;
+     <button ><i class="fa fa-thumbs-down" aria-hidden="true"></i></button></dt>
+     <dt><a href="DBMS coursera certificate.pdf" target="_blank">VIEW PDF</a></dt>
+    </dl-->
+  
+  </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+    
+    
+    <script src="fee.js"></script>
+
+
+
+
+  </body>
+</html>

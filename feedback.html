@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Feedback</title>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+
+
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" type="text/css" href="feedback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">-->
+  </head>
+  <body>
+
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left_area">
+        <h3>tech <span>buddy</span></h3>
+      </div>
+      <div class="right_area">
+        <a href="index.html" class="logout_btn">Logout</a>
+      </div>
+    </header>
+    <!--header area end-->
+    <!--sidebar start-->
+    <div class="sidebar">
+      <center>
+        <div id="profile">
+        <img src="1.png" class="profile_image" alt="">
+      </div>
+      <div id="side" class="side">
+        <h4></h4>
+        </div>
+      </center>
+      <a href="profile.html"><i class="fas fa-desktop"></i><span>Profile</span></a>
+      <a href="feed.html"><i class="fas fa-cogs"></i><span>Feeds</span></a>
+      <a href="addpro.html"><i class="fas fa-table"></i><span>Add Project</span></a>
+      <a href="setting.html"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+    </div>
+    <!--sidebar end-->
+  <div class="content">
+    <!--search bar -->
+      <form class="search">
+      <input class="bar" type="text" name="search" placeholder="Search.." id="input">
+      <ul id="pastComments2">
+        <li id="loadButton">Search</li> 
+      </ul>
+      <script>
+        var input = document.getElementById("input");
+        input.addEventListener("keyup", function(event) {
+          if (event.keyCode === 13) {
+           event.preventDefault();
+           document.getElementById("loadButton").click();
+           
+          }
+        });
+        </script>
+        
+    </form>
+    <!--search bar end-->
+    <h3 class="help">FEEDBACK</h3>
+     <div class="container">
+     Overall Experience: 
+      <form class="rating">
+        <label>
+          <input class="star" type="radio" name="stars" value="1" />
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input class="star" type="radio" name="stars" value="2" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input class="star" type="radio" name="stars" value="3" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>   
+        </label>
+        <label>
+          <input class="star" type="radio" name="stars" value="4" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input class="star" type="radio" name="stars" value="5" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+      </form>
+    <br>
+    <br >
+    <label  for="email">How well is the website usefull:</label>
+    <select id="utility"  name="country">
+      <option>Not at all usefull</option>
+      <option>Satisfied</option>
+      <option>Very usefull</option>
+      
+    </select>
+    
+    <br >
+    
+    <label  for="email">Is the information efficient:</label>
+    <select id="info"  name="country">
+      <option>No</option>
+      <option>Maybe</option>
+      <option>Yes</option>
+        
+    </select>
+      <br>
+        <label  for="lname">Overall Experience:</label>
+        <input id="Experience" type="tex" id="lname" name="lastname" placeholder="Experience.." style="height:60px">
+    
+    <br>
+    <label  for="lname">Any Suggestions:</label>
+    <input id="suggestions" type="tex" id="lname" name="lastname" placeholder="Suggestions.." style="height:60px">
+    <br>
+        <input id="submit" type="button" value="Submit">
+      </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+    <script src="feedback.js"></script>
+    
+    
+    
+      </body>
+    </html>

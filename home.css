@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+body{
+    color: #fff;
+    background: #22242A;
+    font-family: "Times New Roman", Times, serif;
+}
+ .button{
+    background-color: #19B3D3;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.column {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    height: 300px;
+    margin-top: 200px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    align-items: center;
+   
+  }
+  .row
+  {
+    padding: 0px 0px 0px 100px;
+  }
+ img {
+  border-radius: 50%;
+  border: 5px solid grey;
+}
